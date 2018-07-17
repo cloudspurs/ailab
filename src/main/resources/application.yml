@@ -1,0 +1,8 @@
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+
+  thymeleaf:
+    cache: false
