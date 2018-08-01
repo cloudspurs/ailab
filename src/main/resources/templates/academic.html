@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="" style="">
+
+<!-- head -->
+<head th:replace="head::html"></head>
+
+<body style="" class="lang-cn">
+	<div
+		style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
+		<img id="mzsharethumbnail"
+			src="https://ai.tencent.com/ailab/images/share.png"
+			alt="Wechat Share Thumbnail">
+	</div>
+	<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+	<section class="g-wrap">
+		<!-- header -->
+		<div th:replace="header::header('academic')"></div>
+
+		<div class="banner banner-academic">
+			<h2>学术合作</h2>
+		</div>
+		<div class="container">
+			<div class="academic-desc common-desc">腾讯AI
+				Lab学术合作计划秉持开放、灵活、共赢的原则，旨在通过无边界的产学研合作，推动人工智能的前沿研发和人才培养。</div>
+			<div class="academic-list">
+				<ul class="academic-row clearfix">
+					<li class="academic-item">
+						<a href="academic1">
+							<span>联合实验</span>
+						</a>
+					</li>
+					<li class="academic-item">
+						<a href="./focused-research">
+							<span>
+								腾讯AI Lab
+								<br>
+								犀牛鸟专项研究计划
+							</span>
+						</a>
+					</li>
+					<li class="academic-item">
+						<a href="./visiting_scholars">
+							<span>
+								腾讯AI Lab
+								<br>
+								犀牛鸟访问学者计划
+							</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="academic-row clearfix">
+					<li class="academic-item">
+						<a href="phdfellowship.html">
+							<span>
+								腾讯AI Lab
+								<br>
+								博士生奖学金计划
+							</span>
+						</a>
+					</li>
+					<li class="academic-item">
+						<a href="academicforum.html">
+							<span>
+								腾讯 AI Lab
+								<br>
+								学术论坛
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div th:replace="footer::html"></div>
+	</section>
+</body>
+</html>

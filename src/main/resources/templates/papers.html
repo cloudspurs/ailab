@@ -1,0 +1,502 @@
+<!doctype html>
+<html class="" style="">
+
+<!-- head -->
+<head th:replace="head::html"></head>
+
+<body style="" class="lang-cn">
+	<div
+		style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
+		<img id="mzsharethumbnail"
+			src="https://ai.tencent.com/ailab/images/share.png"
+			alt="Wechat Share Thumbnail">
+	</div>
+	<div
+		style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
+		<img id="mzsharethumbnail"
+			src="https://ai.tencent.com/ailab/images/logo.png"
+			alt="Wechat Share Thumbnail">
+	</div>
+	<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+
+
+
+	<section class="g-wrap">
+		<!-- header -->
+		<div th:replace="header::header('papers')"></div>
+
+		<div class="container">
+			<div class="paper-title paper-list-tit">论文</div>
+			<div class="paper-content">
+				<div class="paper-main">
+					<!--新的论文-->
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="paper1">Adversarial
+								Learning with Local Coordinate Coding</a>
+						</h3>
+						<p class="paper-list-desc">Generative adversarial networks
+							(GANs) aim to generate realistic data from some prior
+							distribution, (i.e., the input of the generator). However, such
+							prior distribution is often independent of real data and may lose
+							semantic information. In practice, a latent distribution can be
+							learned to represent the semantic information, but it is hard to
+							be used for sampling in GANs for generating data. In this paper,
+							we exploit Local Coordinate Coding (LCC) to improve GANs.
+							Consequently, we are able to employ a new LCC based sampling
+							method with a local coordinate system, rather than sampling from
+							pre-defined prior distribution. More importantly, relying on LCC,
+							we theoretically prove that the generalization ability of GANs
+							depends on the intrinsic dimension of the latent manifold.
+							Moreover, we conduct extensive experiments on real-world datasets
+							to demonstrate the effectiveness of the proposed method.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./The_Edge_Density_Barrier__Computational-Statistical_Tradeoffs_in_Combinatorial_Inference.html">The
+								Edge Density Barrier: Computational-Statistical Tradeoffs in
+								Combinatorial Inference</a>
+						</h3>
+						<p class="paper-list-desc">We study the hypothesis testing
+							problem of inferring the existence of combinatorial structures in
+							undirected graphical models. Although there exist extensive
+							studies on the information-theoretic limits of this problem, it
+							remains largely unexplored whether such limits can be attained by
+							efficient algorithms. In this paper, we quantify the minimum
+							computational complexity required to attain the
+							information-theoretic limits based on an oracle computational
+							model. We prove that, for testing common combinatorial
+							structures, such as clique, nearest neighbor graph and perfect
+							matching, against an empty graph, or large clique against small
+							clique, the information-theoretic limits are provably
+							unachievable by tractable algorithms in general. More
+							importantly, we define structural quantities called the weak and
+							strong edge densities, which offer deep insight into the
+							existence of such computational-statistical tradeoffs. To the
+							best of our knowledge, our characterization is the first to
+							identify and explain the fundamental tradeoffs between statistics
+							and computation for combinatorial inference problems in
+							undirected graphical models.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./Composite_Functional_Gradient_Learning_of_Generative_Adversarial_Models.html">Composite
+								Functional Gradient Learning of Generative Adversarial Models</a>
+						</h3>
+						<p class="paper-list-desc">This paper first presents a theory
+							for generative adversarial methods that does not rely on the
+							traditional minimax formulation. It shows that with a strong
+							discriminator, a good generator can be learned so that the KL
+							divergence between the distributions of real data and generated
+							data improves after each functional gradient step until it
+							converges to zero. Based on the theory, we propose a new stable
+							generative adversarial method. A theoretical insight into the
+							original GAN from this new viewpoint is also provided. The
+							experiments on image generation show the effectiveness of our new
+							method.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./Feedback-based_Tree_Search_for_Reinforcement_Learning.html">Feedback-based
+								Tree Search for Reinforcement Learning</a>
+						</h3>
+						<p class="paper-list-desc">Inspired by recent successes of
+							Monte-Carlo tree search (MCTS) in a number of artificial
+							intelligence (AI) application domains, we propose a model-based
+							reinforcement learning (RL) technique that iteratively applies
+							MCTS on batches of small, finite-horizon versions of the original
+							infinite-horizon Markov decision process. The terminal condition
+							of the finite-horizon problems, or the leaf-node evaluator of the
+							decision tree generated by MCTS, is specified using a combination
+							of an estimated value function and an estimated policy function.
+							The recommendations generated by the MCTS procedure are then
+							provided as feedback in order to refine, through classification
+							and regression, the leaf-node evaluator for the next iteration.
+							We provide the first sample complexity bounds for a tree
+							search-based RL algorithm. In addition, we show that a deep
+							neural network implementation of the technique can create a
+							competitive AI agent for the popular multi-player online battle
+							arena (MOBA) game King of Glory.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./Graphical_Nonconvex_Optimization_for_Optimal_Estimation_in_Gaussian_Graphical_Models.html">Graphical
+								Nonconvex Optimization for Optimal Estimation in Gaussian
+								Graphical Models</a>
+						</h3>
+						<p class="paper-list-desc">We consider the problem of learning
+							high-dimensional Gaussian graphical models. The graphical lasso
+							is one of the most popular methods for estimating Gaussian
+							graphical models. However, it does not achieve the oracle rate of
+							convergence. In this paper, we propose the graphical nonconvex
+							optimization for optimal estimation in Gaussian graphical models,
+							which is then approximated by a sequence of convex programs. Our
+							proposal is computationally tractable and produces an estimator
+							that achieves the oracle rate of convergence. The statistical
+							error introduced by the sequential approximation using the convex
+							programs are clearly demonstrated via a contraction property. The
+							rate of convergence can be further improved using the notion of
+							sparsity pattern. The proposed methodology is then extended to
+							semiparametric graphical models. We show through numerical
+							studies that the proposed estimator outperforms other popular
+							methods for estimating Gaussian graphical models.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./Fully_Decentralized_Multi-Agent_Reinforcement_Learning_with_Networked_Agents.html">Fully
+								Decentralized Multi-Agent Reinforcement Learning with Networked
+								Agents</a>
+						</h3>
+						<p class="paper-list-desc">We consider the problem of
+							\emph{fully decentralized} multi-agent reinforcement learning
+							(MARL), where the agents are located at the nodes of a
+							time-varying communication network. Specifically, we assume that
+							the reward functions of the agents might correspond to different
+							tasks, and are only known to the corresponding agent. Moreover,
+							each agent makes individual decisions based on both the
+							information observed locally and the messages received from its
+							neighbors over the network. Within this setting, the collective
+							goal of the agents is to maximize the globally averaged return
+							over the network through exchanging information with their
+							neighbors. To this end, we propose two decentralized actor-critic
+							algorithms with function approximation, which are applicable to
+							large-scale MARL problems where both the number of states and the
+							number of agents are massively large. Under the decentralized
+							structure, the actor step is performed individually by each agent
+							with no need to infer the policies of others. For the critic
+							step, we propose a consensus update via communication over the
+							network. Our algorithms are fully incremental and can be
+							implemented in an online fashion. Convergence analyses of the
+							algorithms are provided when the value functions are approximated
+							within the class of linear functions. Extensive simulation
+							results with both linear and nonlinear function approximations
+							are presented to validate the proposed algorithms. Our work
+							appears to be the first study of fully decentralized MARL
+							algorithms for networked agents with function approximation, with
+							provable convergence guarantees.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./Asynchronous_Decentralized_Parallel_Stochastic_Gradient_Descent.html">Asynchronous
+								Decentralized Parallel Stochastic Gradient Descent</a>
+						</h3>
+						<p class="paper-list-desc">Most commonly used distributed
+							machine learning systems are either synchronous or centralized
+							asynchronous. Synchronous algorithms like AllReduce-SGD perform
+							poorly in a heterogeneous environment, while asynchronous
+							algorithms using a parameter server suffer from 1) communication
+							bottleneck at parameter servers when workers are many, and 2)
+							significantly worse convergence when the traffic to parameter
+							server is congested. Can we design an algorithm that is robust in
+							a heterogeneous environment, while being communication efficient
+							and maintaining the best-possible convergence rate? In this
+							paper, we propose an asynchronous decentralized stochastic
+							gradient decent algorithm (AD-PSGD) satisfying all above
+							expectations. Our theoretical analysis shows AD-PSGD converges at
+							the optimal O(1/K−−√) rate as SGD and has linear speedup w.r.t.
+							number of workers. Empirically, AD-PSGD outperforms the best of
+							decentralized parallel SGD (D-PSGD), asynchronous parallel SGD
+							(A-PSGD), and standard data parallel SGD (AllReduce-SGD), often
+							by orders of magnitude in a heterogeneous environment. When
+							training ResNet-50 on ImageNet with up to 128 GPUs, AD-PSGD
+							converges (w.r.t epochs) similarly to the AllReduce-SGD, but each
+							epoch can be up to 4-8X faster than its synchronous counterparts
+							in a network-sharing HPC environment. To the best of our
+							knowledge, AD-PSGD is the first asynchronous algorithm that
+							achieves a similar epoch-wise convergence rate as AllReduce-SGD,
+							at an over 100-GPU scale.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./D2__Decentralized_Training_over_Decentralized_Data.html">D2:
+								Decentralized Training over Decentralized Data</a>
+						</h3>
+						<p class="paper-list-desc">While training a machine learning
+							model using multiple workers, each of which collects data from
+							their own data sources, it would be most useful when the data
+							collected from different workers can be {\em unique} and {\em
+							different}. Ironically, recent analysis of decentralized parallel
+							stochastic gradient descent (D-PSGD) relies on the assumption
+							that the data hosted on different workers are {\em not too
+							different}. In this paper, we ask the question: {\em Can we
+							design a decentralized parallel stochastic gradient descent
+							algorithm that is less sensitive to the data variance across
+							workers?} In this paper, we present D2, a novel decentralized
+							parallel stochastic gradient descent algorithm designed for large
+							data variance \xr{among workers} (imprecisely, "decentralized"
+							data). The core of D2 is a variance blackuction extension of the
+							standard D-PSGD algorithm, which improves the convergence rate
+							from O(σnT√ (nζ2)13T2/3) to O(σnT√) where ζ2 denotes the variance
+							among data on different workers. As a result, D2 is robust to
+							data variance among workers. We empirically evaluated D2 on image
+							classification tasks where each worker has access to only the
+							data of a limited set of labels, and find that D2 significantly
+							outperforms D-PSGD.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./Candidates_v.s._Noises_Estimation_for_Large_Multi-Class_Classification_Problem.html">Candidates
+								v.s. Noises Estimation for Large Multi-Class Classification
+								Problem</a>
+						</h3>
+						<p class="paper-list-desc">This paper proposes a method for
+							multi-class classification problems, where the number of classes
+							K is large. The method, referred to as {\em Candidates v.s.
+							Noises Estimation} (CANE), selects a small subset of candidate
+							classes and samples the remaining classes. We show that CANE is
+							always consistent and computationally efficient. Moreover, the
+							resulting estimator has low statistical variance approaching that
+							of the maximum likelihood estimator, when the observed label
+							belongs to the selected candidates with high probability. In
+							practice, we use a tree structure with leaves as classes to
+							promote fast beam search for candidate selection. We also apply
+							the CANE method to estimate word probabilities in neural language
+							models. Experiments show that CANE achieves better prediction
+							accuracy over the Noise-Contrastive Estimation (NCE), its
+							variants and a number of the state-of-the-art tree classifiers,
+							while it gains significant speedup compared to the standard O(K)
+							methods.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+					<div class="paper-list-item">
+						<h3 class="paper-list-title">
+							<a
+								href="./End-to-end_Active_Object_Tracking_via_Reinforcement_Learning.html">End-to-end
+								Active Object Tracking via Reinforcement Learning</a>
+						</h3>
+						<p class="paper-list-desc">We study active object tracking,
+							where a tracker takes as input the visual observation (i.e.,
+							frame sequence) and produces the camera control signal (e.g.,
+							move forward, turn left, etc.). Conventional methods tackle the
+							tracking and the camera control separately, which is challenging
+							to tune jointly. It also incurs many human efforts for labeling
+							and many expensive trial-and-errors in realworld. To address
+							these issues, we propose, in this paper, an end-to-end solution
+							via deep reinforcement learning, where a ConvNet-LSTM function
+							approximator is adopted for the direct frame-toaction prediction.
+							We further propose an environment augmentation technique and a
+							customized reward function, which are crucial for a successful
+							training. The tracker trained in simulators (ViZDoom, Unreal
+							Engine) shows good generalization in the case of unseen object
+							moving path, unseen object appearance, unseen background, and
+							distracting object. It can restore tracking when occasionally
+							losing the target. With the experiments over the VOT dataset, we
+							also find that the tracking ability, obtained solely from
+							simulators, can potentially transfer to real-world scenarios.</p>
+						<span class="paper-list-infor">2018 ICML·2018</span>
+					</div>
+
+
+
+					<!--ICCV-->
+
+				</div>
+				<div class="paper-side" style="">
+					<div class="news-cats clearfix" style="">
+						<div class="news-cats-item" style="width: 4rem;">
+							<a href="javascript:;" class="news-selected-cat" data-tag="0">All
+								Areas </a>
+							<i class="icon-arrow"></i>
+							<ul class="news-dropdown">
+
+								<li data-tag="0">
+									<a href="">All Areas</a>
+								</li>
+								<li data-tag="1">
+									<a href="">Computer Vision</a>
+								</li>
+
+								<li data-tag="2">
+									<a href="">Speech Recognition</a>
+								</li>
+
+								<li data-tag="3">
+									<a href="">Natural Language Processing</a>
+								</li>
+
+								<li data-tag="4">
+									<a href="">Machine Learning</a>
+								</li>
+								<!--                <li data-tag="5" ><a href="">Reinforcement Learning</a></li>-->
+
+							</ul>
+						</div>
+						<div class="news-cats-item"
+							style="margin-top: 2rem; display: none; width: 4rem;">
+							<a href="" class="news-selected-cat">All Years</a>
+							<i class="icon-arrow"></i>
+							<ul class="news-dropdown">
+
+								<li>
+									<a href="">Year Section 1</a>
+								</li>
+
+								<li>
+									<a href="">Year Section 2</a>
+								</li>
+
+								<li>
+									<a href="">Year Section 3</a>
+								</li>
+
+								<li>
+									<a href="">Year Section 4</a>
+								</li>
+
+								<li>
+									<a href="">Year Section 5</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-navigation" style="">
+				<a href="javascript:;" class="active">1</a>
+				<a href="javascript:;" class="">2</a>
+				<a href="javascript:;" class="">3</a>
+				<a href="javascript:;" class="">4</a>
+				<a href="javascript:;" class="">5</a>
+				<a href="javascript:;" class="">6</a>
+				<a href="javascript:;" class="">7</a>
+				<a href="javascript:;" class="">8</a>
+				<a href="javascript:;" class="">9</a>
+				<a href="javascript:;" class="">10</a>
+				<a href="javascript:;" class="">11</a>
+				<a href="javascript:;" class="">12</a>
+				<a href="javascript:;" class="">13</a>
+				<a href="javascript:;" class="">14</a>
+			</div>
+		</div>
+		<div th:replace="footer::html"></div>
+	</section>
+
+	<script>
+	(function() {
+
+		var share = new Sona.Share({
+			title: 'Tencent AI Lab',
+			desc: '让 AI 无处不在',
+			thumb: '/images/logo.png'
+		});
+
+
+	})();
+
+		var _mtac = {};
+		var show_list = function (tag, page) {
+			page = page || 1;
+			tag = tag;
+			$.ajax({
+				type : "GET",
+				data : {
+					   },
+	url  : '//ai.tencent.com/ailab/interface.php?jsonData={"interface":{"interfaceName":"Paper.getListByTag","para":{"tag":'+tag+',"page":"'+page+'"}}}',
+				success:function(ret){
+					if (ret.returnCode === 0) {
+	$('.page-navigation').empty();
+						$('.paper-main').empty();
+				var tpl = '<div class="paper-list-item"><h3 class="paper-list-title"><a href="{url}">{title}</a></h3><p class="paper-list-desc">{abstract}...</p><span class="paper-list-infor">{venue} ·{time}</span></div>';
+						if(ret.data.length >0) {
+	//$('.page-navigation').hide();
+	for(var i =0; i< ret.data.length; i++){
+		var cur_paper = ret.data[i];
+		var file_name = cur_paper["file_name"];
+		var title     = cur_paper["title"];
+		var abstract= cur_paper["content"].replace(/<[^>]+>/g,"");
+		var venue = cur_paper["venue"];
+		var time = cur_paper["publish_time"];
+		var cur_html  = tpl.replace(/{url}/,file_name).replace(/{title}/,title).replace(/{abstract}/,abstract).replace(/{venue}/,venue).replace(/{time}/,time);
+
+	   $('.paper-main').append(cur_html);
+	}
+						}
+						var pageTpl = '<a href="javascript:;">{page}</a>';
+						for(var i = 0; i < Math.ceil(ret.total/10); i ++){
+							var curPage = pageTpl.replace(/{page}/, i+1);
+							$('.page-navigation').append(curPage);
+						}
+						$('.page-navigation a:eq("' + (page-1) + '")').addClass("active");
+						
+					}else{
+					}
+				}
+			});
+		};
+
+	// 移动端导航
+	//$(document).on('click','.nav_btn',function(e){
+	//  $nav =  $(this).parents('.header').find('.navbar');
+	// $nav.hasClass('show') ? $nav.removeClass('show') : $nav.addClass('show');
+	// e.stopPropagation();
+	// $(document).on('touchmove',function(e){
+	//   $nav.removeClass('show');
+	// });
+	//});
+
+		// 新闻分类筛选
+	$(document).on('click','.news-cats-item',function(){
+		$('.news-cats-item').removeClass('active');
+		var $this = $(this);
+		if($this.hasClass('active')){
+			$this.removeClass('active');
+		} else{
+			$this.addClass('active');
+		}
+		$(document).on('click',function(){
+			$this.removeClass('active');
+		});
+		return false;
+	});
+
+	$(document).on('click','.news-dropdown li a',function(e){
+		var $this = $(this);
+		var $item = $this.parents('.news-cats-item');
+		var $select = $item.find('.news-selected-cat');
+		$select.text($this.text());
+		$item.removeClass('active');
+		var tag = $this.parent().data("tag");
+		$('.news-selected-cat').data("tag", tag);
+		show_list(tag);
+		
+		return false;
+	});
+
+	$('.page-navigation').on('click','a',function(e){
+		var tag = $('.news-selected-cat').data("tag");
+		var page = $(this).index() + 1;
+		show_list(tag, page);
+		
+		return false;
+	});
+	</script>
+</body>
+</html>

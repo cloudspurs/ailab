@@ -1,8 +1,7 @@
 spring:
-  mvc:
-    view:
-      prefix: /views/
-      suffix: .jsp
-
   thymeleaf:
     cache: false
+
+  mvc:
+    favicon:
+      enabled: false

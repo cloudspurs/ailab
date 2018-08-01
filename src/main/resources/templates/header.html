@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<!-- Swiper -->
+	<div th:fragment="header(page)" class="header fixed on">
+		<h1 class="head-logo" title="腾讯 AI Lab">腾讯 AI Lab 官网</h1>
+		<a class="head-logolink" href="//ai.tencent.com/ailab/index.html">腾讯
+			AI Lab 官网</a>
+		<div class="lang">
+			<a href="javascript:;" id="en" class=" ">En</a>
+			<span>/</span>
+			<a href="javascript:;" id="cn" class="on">中</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li th:class="${page} == 'index' ? 'active' : ''")>
+					<a href="index">
+						<span>首页</span>
+					</a>
+				</li>
+				<li th:class="${page} == 'members' ? 'active' : ''")>
+					<a href="members">
+						<span>成员</span>
+					</a>
+				</li>
+				<li th:class="${page} == 'papers' ? 'active' : ''")>
+					<a href="papers">
+						<span>论文</span>
+					</a>
+				</li>
+				<li th:class="${page} == 'news' ? 'active' : ''">
+					<a href="news">
+						<span>新闻</span>
+					</a>
+				</li>
+				<li th:class="${page} == 'academic' ? 'active' : ''">
+					<a href="academic">
+						<span>合作</span>
+					</a>
+				</li>
+				<li th:class="${page} == 'recruit' ? 'active' : ''">
+					<a href="recruit">
+						<span>招聘</span>
+					</a>
+				</li>
+				<li th:class="${page} == 'about' ? 'active' : ''">
+					<a href="about">
+						<span>关于</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="javascript:;" class="nav_btn"></a>
+	</div>
+</html>

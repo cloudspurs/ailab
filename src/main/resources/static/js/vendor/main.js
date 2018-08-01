@@ -1,4 +1,5 @@
 // 导航下拉
+
 $(document).on('mouseenter','.navbar li.has-dropdown',function(){
     $(this).addClass('dropdown-show');
 });
@@ -110,8 +111,7 @@ function loadProperties() {
 
             // 导航
             $('.navbar li:eq(0)').find('span').text(msg_nav_1);
-            $('.navbar li:eq(1)').find('span').text(msg_nav_7);
-            $('.navbar li:eq(2)').find('span').text(msg_nav_2);
+            $('.navbar li:eq(1)').find('span').text(msg_nav_2);
             $('.navbar li:eq(3)').find('span').text(msg_nav_3);
             $('.navbar li:eq(4)').find('span').text(msg_nav_4);
             $('.navbar li:eq(5)').find('span').text(msg_nav_5);
@@ -139,6 +139,7 @@ function loadProperties() {
 
             $('.visiting_scholars_program_title').html(visiting_scholars_program_title); // 腾讯AI Lab犀牛鸟访问学者
             $('.visiting_scholars_program').html(visiting_scholars_program); // 腾讯AI Lab犀牛鸟访问学者
+
 
             // 招聘
             $('.banner-recruit h2').html(msg_banner_recruit);
@@ -204,6 +205,7 @@ function loadProperties() {
             $('.endot').hide();
         }
     }
+
 }
 
 // 点击切换英文

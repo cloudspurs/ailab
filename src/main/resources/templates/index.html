@@ -1,386 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
 <!doctype html>
-<html class="pc indexpc" style="font-size: 86.8519px;">
-<head>
-<meta charset="UTF-8">
-<title>腾讯 AI Lab - 腾讯人工智能实验室官网</title>
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="baidu-site-verification" content="r5znRc9TGh">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta
-	content="腾讯AI,QQ AI,腾讯人工智能实验室,，腾讯人工智能，计算机视觉，语音合成，语音识别，语音技术，语音识别与合成，自然语言处理，机器学习，大数据，深度学习，视频滤镜，图像滤镜，图像描述生成，语音识别前端，神经网络，信息挖掘，信息抽取，对话，问答，机器翻译"
-	name="Keywords">
-<meta name="description"
-	content="腾讯 AI Lab（腾讯人工智能实验室）， 腾讯公司级AI战略，聚集全球数十位人工智能科学家、70余位世界一流AI博士。聚焦Content AI, Social AI，Game AI. 
-专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究。基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
-">
-<meta name="format-detection" content="telephone=no,email=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="author" content="Tencent-CDC">
-<meta name="copyright" content="Tencent">
-<meta name="robots" content="index,follow">
-<link href="images/favicon.ico" type="/image/ico" rel="shortcut icon">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<html class="index" style="">
 
+<!-- head -->
+<head th:replace="head::html"></head>
 
-<script src="//pingjs.qq.com/h5/stats.js?v2.0.2" name="MTAH5"
-	sid="500355814" cid="500357202"></script>
-<script>
-(function(doc, win) {
-    var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-            var designWidth  = 1920; // 设计稿宽度
-            var designHeight = 1080; // 设计稿高度
-            var maxWidth     = 1920; // 设计稿最大宽度
-            var maxHeight    = 1080; // 设计稿最大高度
-            var clientWidth  = docEl.clientWidth;
-            var clientHeight = docEl.clientHeight;
-            var baseFontSize = 100; // 根元素基准字体大小
-            if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-                //移动端
-                docEl.setAttribute("class", "m"); 
-                baseFontSize = 256; // 根元素基准字体大小
-                // console.log('m');
-                $('.header').addClass('fixed');
-            } else {
-                //PC端
-                docEl.setAttribute("class", "pc indexpc");
-                baseFontSize = 100; // 根元素基准字体大小
-                // console.log('pc');
-            }
-
-            if (!clientWidth) return;
-            if (clientWidth / clientHeight > designWidth / designHeight) {
-                if (clientHeight <= maxHeight) {
-                    docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
-                } else {
-                    docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
-                }
-            } else {
-                if (clientWidth <= maxWidth) {
-                    docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
-                } else {
-                    docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
-                }
-            }
-        };
-
-    // Abort if browser does not support addEventListener
-    if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, recalc, false);
-    doc.addEventListener('DOMContentLoaded', recalc, false);
-})(document, window);
-
-
-</script>
-<link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css">
-<script type="text/javascript" src="/js/vendor/idangerous.swiper.min.js"></script>
-
-<script type="text/javascript" src="/js/vendor/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="/js/vendor/sona.min.js"></script>
-<style type="text/css">
-#sonaOrientation {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: #131313;
-	z-index: 999
-}
-
-#sonaOrientation.hide {
-	display: none
-}
-
-#sonaOrientation.sona-transparent {
-	background-color: rgba(0, 0, 0, .85)
-}
-
-#sonaOrientation.sona-close .hinter_close {
-	display: block
-}
-
-#sonaOrientation .hinter_close {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	height: 24px;
-	width: 24px;
-	background:
-		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAflBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////vroaSAAAAKXRSTlMAw8kPCxnzy/wFciP2ixQSlY9c6L63YE9DFmpXOe7p29nQzXhsKZtmO6BiKe8AAAHoSURBVEjHpZbZcuIwEEXbJJIl72CzmC0BEpL7/z84FVWGLuvKw8P0AxRd5xTudmsRivGwXL+fqur0vl4eRnkSbZFjEnnRynyY2gIurzffpTHl96bOHVB1Zgb3hQXyj3byjx85YAuf4ssrkO04v8uAyyfntxb9SpKx6mG3cbIGBjNb2wD3NU3tgfM/2uHvwH7yPA49Fi+zwmsGuK3+/rToXhZQg/nsDvuo3F8weAnGLP/qB1z+drfA2YiokeJFzBk3CWEsQj/VYD50F9aETIdMhAziRTJ0P19NhZ2wwbzsUDWhglyEDeZFchThcy9sMB9eby4ywjVCRpKXxsHI4cciI+L1mVayRC1pg3mpsZQ1NpI0lNfYYC1vOErKMMprHPEmFqWkDAvmpYQVoBEOY2ENp1sgErSfNlROQhU9kvbfpCaxxCkuWvsfesVFU1u1/8GgtuqLi3k2wovT0SCejTAaI1zLPBk6fDrexKuh460LiHk2chS6RIknIyxR3QSIZyNDp9sM8WwcHuNVoDfEk2F63H4T/orBRzwZ7YCrf8yUxT3iyTjDlpPtPvDzRg9sowOl8/O87xCP3Jd7dmT976H4/Njl8LcKWMQH+wKobnPlmeXv1eFYjmN55KsDR8OXk4ag5PXHuZnrzx+IlDamiY+WTQAAAABJRU5ErkJggg==)
-		no-repeat 50% transparent;
-	background-size: 24px 24px;
-	overflow: hidden;
-	text-indent: 100%;
-	white-space: nowrap;
-	opacity: .8;
-	display: none
-}
-
-#sonaOrientation .hinter_phone {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -30px 0 0 -57px
-}
-
-#sonaOrientation .hinter_phone i {
-	display: block;
-	width: 114px;
-	height: 60px;
-	background:
-		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOQAAAB4CAMAAADVLa6HAAABCFBMVEUAAAAAAAAAAABWVlYAAADFxcUAAACKioovLy8AAAAAAAAAAAC+vr6+vr6EhIQAAAALCwsBAQEGBgbIyMjGxsYAAADGxsbHx8cAAADHx8fAwMCoqKi9vb1SUlIGBgbHx8fFxcW0tLSxsbGgoKC7u7slJSVeXl6ysrLFxcW/v7+7u7uoqKiRkZEUFBQFBQWMjIxxcXHExMTExMTCwsK6urq2trbBwcHExMSsrKzExMS1tbWUlJTDw8O0tLSnp6dpaWm9vb1ZWVmDg4PAwMCvr6+Ojo4+Pj4xMTFKSkpnZ2e2trahoaGxsbGfn5+3t7ecnJyvr6+CgoKVlZU9PT1WVlasrKy8vLzJycmXdzvDAAAAV3RSTlMAARMjBL8WfEggDinGSGgeBwsj++IU8vkb9N6oeE0x7tBMt49nLykPxtLEmoM9NxcG6dvl0Ma6sLCnnYmHb11cW1hSUUFAOzo2NCQcqpmOfXx1bUY9Ny21pUe+AAAC6klEQVR42uzaV2/bMBSGYVI9kRs6aanhWc/YiffKHs1oM5t0r+///5MyrgvXqR0XuZIP+N5IF7rQAxIHAkQxTpJWDo+URySmRPri48oghcUvKDbef/UT3j9Mqaub4FSydePqSSb9KAGZtU9v3208W/g2Lk8OQ8Ns+4r+NlZTSFbWXaWJSC58BuGdlIC1dYfGxhywc+V6JPhEOhdgZ6yUZ8CruMOJOGSWM1iLqxHrNmOMiptRCFkOcOTr3/e72C6wW8ehLIfkN3cou0DqTZqjUYh+yexRT5j2sB/3pGDZKjKdBAlRC8B1IYWQm4gtG9w5sgVn2kKS5yxAcwbmazNgvfvLvrlMaQmL0JWSj+/XbEEJcYCKrxcX+dx9FHmLVNcRYhftWcj2ddS/ZOcia0AnIY0ltjwDGfO1jHZzkcI8MULSDORy1KfufyFdi7TISGSRFmmR0coiLdIio9UTkMMfPh5Jzkiqhkg1vyeIM/IcK63DTCOuJGPkXlhIe8c4dYkxcmklrsQqXry0yEhlkRZpkdHKIi3SIqOVRVqkRUYri+SJJK2U4zhKE1sk9Y6bYRAMmpUb1yOeyH6uiFGp1rpDkh9S3tWBbMWc17383DB3eVdLdsi7EMmY72gy6XKIYt4lbsh+HVv59J+BI3slZK8TxAyZQzKfpvGc7YX3JwclK2StiCPfmMaVEeRdYoU8w1Y3MfGuVMcHX7NCHgyPtU5UxXZBsULW8eXhq/7EoOuwQoY4fXhkt4agwwv5q707OGEYiKEg2kUgpyQtpBn334nB+OgChN78DgYWe1eg+Z8nyGMZ5PfpuL6WHVfiw0P8QojLAHGtMy7oxFPLeDQT4497kPV/7x5kGSNJZLgcZJCjE2SQQc5KkEEGOStButsExF4IseFD7GoZW3dBjkyQQQY5K0EGGeSsBClCrle6EXI+QrNICDMJ9SkhsV2tI/5dOmJFLE0owgnZu6HtJwoYjCoNoxTFqLcxiop2V06dXT9t25ovKx4AAAAASUVORK5CYII=)
-		no-repeat 50% transparent;
-	background-size: 114px 60px;
-	-webkit-animation: rotateHint 2.6s ease-in infinite;
-	animation: rotateHint 2.6s ease-in infinite
-}
-
-#sonaOrientation.sona-portrait .hinter_phone {
-	-webkit-transform: rotate(90deg);
-	transform: rotate(90deg)
-}
-
-#sonaOrientation .hinter_rotate {
-	width: 155px;
-	height: 30px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -15px 0 0 -77px;
-	background:
-		url(data:image/png;base64,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)
-		no-repeat 50% transparent;
-	background-size: 155px 30px
-}
-
-#sonaOrientation .hinter_text {
-	position: absolute;
-	right: 0;
-	bottom: 15%;
-	left: 0;
-	color: #bbb;
-	font-size: 14px;
-	font-weight: 400;
-	text-align: center;
-	line-height: 1
-}
-
-@
--webkit-keyframes rotateHint { 0%{
-	-webkit-transform: rotate(0deg);
-	opacity: .2
-}
-
-50%{
--webkit-transform
-:rotate(90deg)
-;opacity
-:
-1
-}
-to {
-	-webkit-transform: rotate(90deg);
-	opacity: 0
-}
-
-}
-@
-keyframes rotateHint { 0%{
-	transform: rotate(0deg);
-	opacity: .2
-}
-
-50%{
-transform
-:rotate(90deg)
-;opacity
-:
-1
-}
-to {
-	transform: rotate(90deg);
-	opacity: 0
-}
-}
-</style>
-<script type="text/javascript" src="/js/vendor/jquery.cookie.js"></script>
-<script type="text/javascript"
-	src="/js/vendor/jquery.i18n.properties.min.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
-
-<style>
-#cVim-command-bar, #cVim-command-bar-mode, #cVim-command-bar-input,
-	#cVim-command-bar-search-results, .cVim-completion-item,
-	.cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left,
-	.cVim-completion-item .cVim-right {
-	font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace,
-		Arial;
-	font-size: 10pt !important;
-	-webkit-font-smoothing: antialiased !important;
-}
-
-#cVim-command-bar {
-	position: fixed;
-	z-index: 2147483646;
-	background-color: #1b1d1e;
-	color: #bbb;
-	display: none;
-	box-sizing: content-box;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
-	left: 0;
-	width: 100%;
-	height: 20px;
-}
-
-#cVim-command-bar-mode {
-	display: inline-block;
-	vertical-align: middle;
-	box-sizing: border-box;
-	padding-left: 2px;
-	height: 100%;
-	width: 10px;
-	padding-top: 2px;
-	color: #888;
-}
-
-#cVim-command-bar-input {
-	background-color: #1b1d1e;
-	color: #bbb;
-	height: 100%;
-	right: 0;
-	top: 0;
-	width: calc(100% - 10px);
-	position: absolute;
-}
-
-#cVim-command-bar-search-results {
-	position: fixed;
-	width: 100%;
-	overflow: hidden;
-	z-index: 2147483647;
-	left: 0;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
-	background-color: #1c1c1c;
-}
-
-.cVim-completion-item, .cVim-completion-item .cVim-full,
-	.cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right {
-	text-overflow: ellipsis;
-	padding: 1px;
-	display: inline-block;
-	box-sizing: border-box;
-	vertical-align: middle;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.cVim-completion-item:nth-child(even) {
-	background-color: #1f1f1f;
-}
-
-.cVim-completion-item {
-	width: 100%;
-	left: 0;
-	color: #bcbcbc;
-}
-
-.cVim-completion-item[active] {
-	width: 100%;
-	left: 0;
-	color: #1b1d1e;
-	background-color: #f1f1f1;
-}
-
-.cVim-completion-item[active] span {
-	color: #1b1d1e;
-}
-
-.cVim-completion-item .cVim-left {
-	color: #fff;
-	width: 37%;
-}
-
-.cVim-completion-item .cVim-right {
-	font-style: italic;
-	color: #888;
-	width: 57%;
-}
-
-#cVim-link-container, .cVim-link-hint, #cVim-hud, #cVim-status-bar {
-	font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace,
-		Arial;
-	font-size: 10pt !important;
-	-webkit-font-smoothing: antialiased !important;
-}
-
-#cVim-link-container {
-	position: absolute;
-	pointer-events: none;
-	width: 100%;
-	left: 0;
-	height: 100%;
-	top: 0;
-	z-index: 2147483647;
-}
-
-.cVim-link-hint {
-	position: absolute;
-	color: #302505 !important;
-	background-color: #ffd76e !important;
-	border-radius: 2px !important;
-	padding: 2px !important;
-	font-size: 8pt !important;
-	font-weight: 500 !important;
-	text-transform: uppercase !important;
-	border: 1px solid #ad810c;
-	display: inline-block !important;
-	vertical-align: middle !important;
-	text-align: center !important;
-	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25) !important;
-}
-
-.cVim-link-hint_match {
-	color: #777;
-	text-transform: uppercase !important;
-}
-
-#cVim-hud {
-	background-color: rgba(28, 28, 28, 0.9);
-	position: fixed !important;
-	transition: right 0.2s ease-out;
-	z-index: 24724289;
-}
-
-#cVim-hud span {
-	padding: 2px;
-	padding-left: 4px;
-	padding-right: 4px;
-	color: #8f8f8f;
-	font-size: 10pt;
-}
-
-#cVim-frames-outline {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	right: 0;
-	z-index: 9999999999;
-	box-sizing: border-box;
-	border: 3px solid yellow;
-}
-</style>
-</head>
 <body style="" class="lang-cn">
 	<div
 		style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
@@ -390,122 +13,42 @@ to {
 	</div>
 	<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
 
-
-
-
-
-
 	<!-- loading -->
 	<div class="loading hide" id="loader">
 		<div class="loading-img" id="loadimg"></div>
 		<div class="loading-bar" id="loadbar">
-			<span class="percent-text">Loading…</span> <span class="percent-num"
-				id="percent">0%</span>
+			<span class="percent-text">Loading…</span>
+			<span class="percent-num" id="percent">0%</span>
 		</div>
 	</div>
 	<!-- loading -->
 
-	<!-- Swiper -->
-	<div class="header">
-		<h1 class="head-logo" title="腾讯 AI Lab">腾讯 AI Lab 官网</h1>
-		<a class="head-logolink" href="//ai.tencent.com/ailab/index.html">腾讯
-			AI Lab 官网</a>
-		<div class="lang">
-			<a href="javascript:;" id="en" class=" ">En</a><span>/</span><a
-				href="javascript:;" id="cn" class="on">中</a>
-		</div>
-		<div class="navbar">
-			<ul>
-				<li class="active"><a href="index.html"><span>首页</span></a></li>
-				<li><a href="paper-list.html"><span>论文</span></a></li>
-				<li style="display: none;"><a href="#"><span>技术体验</span></a></li>
+	<!-- header -->
+	<div th:replace="header::header('index')"></div>
 
-				<!--
-            <li class="has-dropdown">
-                <a href="technology-basis-text-analysis.html">
-                    <span>技术体验</span>
-                </a>
-                <div class="navbar-dropdown">
-                    <div class="dropdown-list clearfix">
-                        <div class="dropdown-item">
-                            <h3><i class="icon nav-icon1"></i><span>自然语言处理</span></h3>
-                            <dl>
-                                <dt><a href="technology-basis-text-analysis.html">基础文本分析</a></dt>
-                                <dd>
-                                    <a href="technology-basis-text-analysis.html#participle">分词/词性标注</a>
-                                    <a href="technology-basis-text-analysis.html#centence">句法分析</a>
-                                    <a href="">语义分析</a>
-                                </dd>
-                                <dt><a href="">智能闲聊</a></dt>
-                                <dt><a href="">机器翻译</a></dt>
-                            </dl>
-                        </div>
-                        <div class="dropdown-item">
-                            <h3><i class="icon nav-icon2"></i><span>计算机视觉</span></h3>
-                            <dl>
-                                <dt><a href="technology-picture-identification.html">图片识别</a></dt>
-                                <dd>
-                                    <a href="technology-picture-identification.html#mark">图片标注</a>
-                                    <a href="technology-picture-identification.html#speak">看图说话</a>
-                                </dd>
-                                <dt><a href="">人脸检测</a></dt>
-                                <dt><a href="">艺术滤镜</a></dt>
-                            </dl>
-                        </div>
-                        <div class="dropdown-item">
-                            <h3><i class="icon nav-icon3"></i><span>智能语音</span></h3>
-                            <dl>
-                                <dt><a href="">语音识别</a></dt>
-                                <dd>
-                                    <a href="">远程语音识别</a>
-                                    <a href="">进场语音识别</a>
-                                    <a href="">说话人识别</a>
-                                </dd>
-                                <dt><a href="">语音合成</a></dt>
-                                <dt><a href="">语音唤醒</a></dt>
-                                <dt><a href="">语音活动性检测</a><i>beta</i></dt>
-                                <dt><a href="">语音降噪</a><i>new</i></dt>
-                            </dl>
-                        </div>
-                        <div class="dropdown-item personal-panel">
-                            <h3>
-                                <i class="icon nav-icon4"></i><span>个人控制台<a href="//10.27.8.59:8080" target="_blank" class="btn-login">登录</a></span>
-                            </h3>
-                            <dl>
-                                <dt><a href="//10.27.8.59:8081/" target="_blank">接入指南</a></dt>
-                                <dt><a href="">API文档</a></dt>
-                                <dd>
-                                    <a href="">自然语言处理</a>
-                                    <a href="">计算机视觉</a>
-                                    <a href="">智能语言</a>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-            </li>
--->
-				<li><a href="news-list.html"><span>新闻</span></a></li>
-				<li><a href="academic-list.html"><span>合作</span></a></li>
-				<li><a href="recruit.html"><span>招聘</span></a></li>
-				<li><a href="about.html"><span>关于</span></a></li>
-			</ul>
-		</div>
-		<a href="javascript:;" class="nav_btn"></a>
-	</div>
 	<div class="swiper-container swiper-container-h">
 		<div class="swiper-pagination-h">
 			<span
-				class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"><em
-				class="cndot">AI Lab</em><em class="endot" style="display: none;">AI
-					Lab</em></span><span class="swiper-pagination-switch"><em class="cndot">研究与应用</em><em
-				class="endot" style="display: none;">Research Areas</em></span><span
-				class="swiper-pagination-switch"><em class="cndot">论文成果</em><em
-				class="endot" style="display: none;">Publications</em></span><span
-				class="swiper-pagination-switch"><em class="cndot">最新动态</em><em
-				class="endot" style="display: none;">News</em></span><span
-				class="swiper-pagination-switch"><em class="cndot">加入腾讯</em><em
-				class="endot" style="display: none;">Join Us</em></span>
+				class="swiper-pagination-switch swiper-visible-switch swiper-active-switch">
+				<em class="cndot">AI Lab</em>
+				<em class="endot" style="display: none;">AI Lab</em>
+			</span>
+			<span class="swiper-pagination-switch">
+				<em class="cndot">研究与应用</em>
+				<em class="endot" style="display: none;">Research Areas</em>
+			</span>
+			<span class="swiper-pagination-switch">
+				<em class="cndot">论文成果</em>
+				<em class="endot" style="display: none;">Publications</em>
+			</span>
+			<span class="swiper-pagination-switch">
+				<em class="cndot">最新动态</em>
+				<em class="endot" style="display: none;">News</em>
+			</span>
+			<span class="swiper-pagination-switch">
+				<em class="cndot">加入腾讯</em>
+				<em class="endot" style="display: none;">Join Us</em>
+			</span>
 		</div>
 		<div class="swiper-wrapper swiper-wrapper-h"
 			style="width: 1920px; height: 4935px; transform: translate3d(0px, 0px, 0px); transition-duration: 0.3s;">
@@ -513,14 +56,19 @@ to {
 				style="width: 1920px; height: 987px;">
 				<div class="page-wr page1">
 					<div class="logo">
-						<img class="logo_img" src="/images/logo.png"
-							srcset="images/logo@2x.png 2x" alt="腾讯 AI Lab">
+						<img class="logo_img" src="/images/aicfe.png"
+							srcset="/images/aicfe.png" alt="腾讯 AI Lab">
 					</div>
 					<!-- <h2 class="logo-text">腾讯 AI Lab 官网</h2> -->
 					<div class="page1-title-slogen">Make AI Everywhere</div>
 					<div class="page1-title">让 AI 无处不在</div>
 					<div class="page1-info">
-						腾讯公司级AI战略蓄势待发，聚集全球数十位人工智能科学家、70余位世界一流AI博士。<br>专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究，孵化出机器翻译、语音聊天、智能问答、图像理解、棋类博弈、无人驾驶等项目，探索未来技术的商业应用前景。<br>基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。<br>
+						腾讯公司级AI战略蓄势待发，聚集全球数十位人工智能科学家、70余位世界一流AI博士。
+						<br>
+						专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究，孵化出机器翻译、语音聊天、智能问答、图像理解、棋类博弈、无人驾驶等项目，探索未来技术的商业应用前景。
+						<br>
+						基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+						<br>
 					</div>
 				</div>
 			</div>
@@ -529,8 +77,8 @@ to {
 					<div class="page-content">
 						<div class="study-title">研究与应用领域</div>
 						<div class="search-cats clearfix">
-							<a href="javascript:;" class="active">研究领域</a> <a
-								href="javascript:;">应用领域</a>
+							<a href="javascript:;" class="active">研究领域</a>
+							<a href="javascript:;">应用领域</a>
 						</div>
 						<div class="paper-container-s">
 							<div class="swiper-wrapper"
@@ -539,51 +87,75 @@ to {
 									class="search-content swiper-slide swiper-slide-visible swiper-slide-active"
 									style="width: 1920px; height: 477.672px;">
 									<ul>
-										<li><i class="icon"><img
-												src="/images/icon-search1.png" alt=""></i>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search1.png" alt="">
+											</i>
 											<h4>计算机视觉</h4>
-											<p>计算机视觉使得计算机能够理解真实的视觉世界。</p></li>
-										<li><i class="icon"><img
-												src="/images/icon-search2.png" alt=""></i>
+											<p>计算机视觉使得计算机能够理解真实的视觉世界。</p>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search2.png" alt="">
+											</i>
 											<h4>语音识别</h4>
-											<p>使机器能“听懂”人类语言，将语音转化为文本。</p></li>
-										<li><i class="icon"><img
-												src="/images/icon-search3.png" alt=""></i>
+											<p>使机器能“听懂”人类语言，将语音转化为文本。</p>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search3.png" alt="">
+											</i>
 											<h4>自然语言处理</h4>
-											<p>赋予计算机系统以自然语言文本方式与外界交互的能力。</p></li>
-										<li><i class="icon"><img
-												src="/images/icon-search4.png" alt=""></i>
+											<p>赋予计算机系统以自然语言文本方式与外界交互的能力。</p>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search4.png" alt="">
+											</i>
 											<h4>机器学习</h4>
-											<p>使计算机在没有明确编程的情况下自动执行。</p></li>
+											<p>使计算机在没有明确编程的情况下自动执行。</p>
+										</li>
 									</ul>
 								</div>
 								<div class="application-content swiper-slide"
 									style="width: 1920px; height: 477.672px;">
 									<ul>
-										<li><i class="icon"><img
-												src="/images/icon-application1.png" alt=""></i>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application1.png" alt="">
+											</i>
 											<div class="section">
 												<h4>社交AI</h4>
 												<p>核心领域：智能助手，客服机器人；应用于中国领先的社交平台，包括微信和QQ。</p>
-											</div></li>
-										<li><i class="icon"><img
-												src="/images/icon-application2.png" alt=""></i>
+											</div>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application2.png" alt="">
+											</i>
 											<div class="section">
 												<h4>游戏AI</h4>
 												<p>核心领域：围棋AI绝艺，其他腾讯游戏；支持中国排名第一的线上游戏提供商。</p>
-											</div></li>
-										<li><i class="icon"><img
-												src="/images/icon-application3.png" alt=""></i>
+											</div>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application3.png" alt="">
+											</i>
 											<div class="section">
 												<h4>内容AI</h4>
 												<p>核心领域：搜索、个性化推荐、内容生成；应用于中国排名第一的线上视频、音乐、阅读平台和新闻app。</p>
-											</div></li>
-										<li><i class="icon"><img
-												src="/images/icon-application4.png" alt=""></i>
+											</div>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application4.png" alt="">
+											</i>
 											<div class="section">
 												<h4>平台AI</h4>
 												<p>核心领域：机器翻译、聊天机器人、语音识别、敏感性分析；通过强大的工具和服务将AI技术带给开发者，以加速技术创新。</p>
-											</div></li>
+											</div>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -660,7 +232,9 @@ to {
 										for Stereo Matching</div>
 									<div class="txt">
 										Zequn Jie, Pengfei Wang, Yonggen Ling, Bo Zhao, Yunchao Wei,
-										Jiashi Feng, Wei Liu<br>2018
+										Jiashi Feng, Wei Liu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -676,7 +250,9 @@ to {
 										Segmentation</div>
 									<div class="txt">
 										Yunchao Wei, Huaxin Xiao, Honghui Shi, Zequn Jie, Jiashi Feng,
-										Thomas Huang<br>2018
+										Thomas Huang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -690,7 +266,9 @@ to {
 									<div class="tit-2">Bidirectional Attentive Fusion with
 										Context Gating for Dense Video Captioning</div>
 									<div class="txt">
-										Jingwen Wang, Wenhao Jiang, Lin Ma, Wei Liu,Yong Xu<br>2018
+										Jingwen Wang, Wenhao Jiang, Lin Ma, Wei Liu,Yong Xu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -706,7 +284,9 @@ to {
 										Coordinate Coding</div>
 									<div class="txt">
 										Jiezhang Cao, Yong Guo, Qingyao Wu, Chunhua Shen,Junzhou
-										Huang， Mingkui Tan<br>2018
+										Huang， Mingkui Tan
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -721,7 +301,9 @@ to {
 									<div class="tit-2">Composite Functional Gradient Learning
 										of Generative Adversarial Models</div>
 									<div class="txt">
-										Rie Johnson, Tong Zhang<br>2018
+										Rie Johnson, Tong Zhang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -735,7 +317,9 @@ to {
 									<div class="tit-2">Feedback-based Tree Search for
 										Reinforcement Learning</div>
 									<div class="txt">
-										Daniel R. Jiang, Emmanuel Ekwedike, Han Liu<br>2018
+										Daniel R. Jiang, Emmanuel Ekwedike, Han Liu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -749,7 +333,9 @@ to {
 									<div class="tit-2">Graphical Nonconvex Optimization for
 										Optimal Estimation in Gaussian Graphical Models</div>
 									<div class="txt">
-										Qiang Sun, Kean Ming Tan, Han Liu, Tong Zhang<br>2018
+										Qiang Sun, Kean Ming Tan, Han Liu, Tong Zhang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -763,7 +349,9 @@ to {
 									<div class="tit-2">Fully Decentralized Multi-Agent
 										Reinforcement Learning with Networked Agents</div>
 									<div class="txt">
-										Kaiqing Zhang, Zhuoran Yang, Han Liu, Tong Zhang, Tamer Başar<br>2018
+										Kaiqing Zhang, Zhuoran Yang, Han Liu, Tong Zhang, Tamer Başar
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -777,7 +365,9 @@ to {
 									<div class="tit-2">Asynchronous Decentralized Parallel
 										Stochastic Gradient Descent</div>
 									<div class="txt">
-										Xiangru Lian, Wei Zhang, Ce Zhang, Ji Liu<br>2018
+										Xiangru Lian, Wei Zhang, Ce Zhang, Ji Liu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -791,7 +381,9 @@ to {
 									<div class="tit-2">D2: Decentralized Training over
 										Decentralized Data</div>
 									<div class="txt">
-										Hanlin Tang, Xiangru Lian, Ming Yan, Ce Zhang, Ji Liu<br>2018
+										Hanlin Tang, Xiangru Lian, Ming Yan, Ce Zhang, Ji Liu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -805,7 +397,9 @@ to {
 									<div class="tit-2">Candidates v.s. Noises Estimation for
 										Large Multi-Class Classification Problem</div>
 									<div class="txt">
-										Lei Han, Tong Zhang<br>2018
+										Lei Han, Tong Zhang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -820,7 +414,9 @@ to {
 										Reinforcement Learning</div>
 									<div class="txt">
 										Wenhan Luo, Peng Sun, Fangwei Zhong, Wei Liu, Tong Zhang,
-										Yizhou Wang<br>2018
+										Yizhou Wang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -834,7 +430,9 @@ to {
 									<div class="tit-2">Policy Optimization with
 										Demonstrations</div>
 									<div class="txt">
-										Bingyi Kang, Zequn Jie, Jiashi Feng<br>2018
+										Bingyi Kang, Zequn Jie, Jiashi Feng
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -848,7 +446,9 @@ to {
 									<div class="tit-2">Safe Element Screening for Submodular
 										Function Minimizatio</div>
 									<div class="txt">
-										Weizhong Zhang, Bin Hong, Lin Ma, Wei Liu, Tong Zhang<br>2018
+										Weizhong Zhang, Bin Hong, Lin Ma, Wei Liu, Tong Zhang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -862,7 +462,9 @@ to {
 									<div class="tit-2">An Algorithmic Framework of Variable
 										Metric Over-Relaxed Hybrid Proximal Extra-Gradient Method</div>
 									<div class="txt">
-										Li Shen, Peng Sun, Yitong Wang, Wei Liu, Tong Zhang<br>2018
+										Li Shen, Peng Sun, Yitong Wang, Wei Liu, Tong Zhang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -878,7 +480,9 @@ to {
 										Communication</div>
 									<div class="txt">
 										Zebang Shen, Aryan Mokhtari, Tengfei Zhou, Peilin Zhao, Hui
-										Qian<br>2018
+										Qian
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -892,7 +496,9 @@ to {
 									<div class="tit-2">Transfer Learning via Learning to
 										Transfer</div>
 									<div class="txt">
-										Ying Wei, Yu Zhang, Junzhou Huang, Qiang Yang<br>2018
+										Ying Wei, Yu Zhang, Junzhou Huang, Qiang Yang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -906,7 +512,9 @@ to {
 									<div class="tit-2">Error Compensated Quantized SGD and
 										its Applications to Large-scale Distributed Optimization</div>
 									<div class="txt">
-										Jiaxiang Wu, Weidong Huang, Junzhou Huang, and Tong Zhang<br>2018
+										Jiaxiang Wu, Weidong Huang, Junzhou Huang, and Tong Zhang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -920,7 +528,9 @@ to {
 									<div class="tit-2">Learning Domain-Sensitive and
 										Sentiment-Aware Word Embeddings</div>
 									<div class="txt">
-										Bei Shi, Zihao Fu, Lidong Bing, Wai Lam<br>2018
+										Bei Shi, Zihao Fu, Lidong Bing, Wai Lam
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -934,7 +544,9 @@ to {
 									<div class="tit-2">Transformation Networks for
 										Target-Oriented Sentiment Classification</div>
 									<div class="txt">
-										Xin Li, Lidong Bing, Wai Lam, Bei Shi<br>2018
+										Xin Li, Lidong Bing, Wai Lam, Bei Shi
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -949,7 +561,9 @@ to {
 										for Stereo Matching</div>
 									<div class="txt">
 										Zequn Jie, Pengfei Wang, Yonggen Ling, Bo Zhao, Yunchao Wei,
-										Jiashi Feng, Wei Liu<br>2018
+										Jiashi Feng, Wei Liu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -965,7 +579,9 @@ to {
 										Segmentation</div>
 									<div class="txt">
 										Yunchao Wei, Huaxin Xiao, Honghui Shi, Zequn Jie, Jiashi Feng,
-										Thomas Huang<br>2018
+										Thomas Huang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -979,7 +595,9 @@ to {
 									<div class="tit-2">Bidirectional Attentive Fusion with
 										Context Gating for Dense Video Captioning</div>
 									<div class="txt">
-										Jingwen Wang, Wenhao Jiang, Lin Ma, Wei Liu,Yong Xu<br>2018
+										Jingwen Wang, Wenhao Jiang, Lin Ma, Wei Liu,Yong Xu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -996,7 +614,9 @@ to {
 										Coordinate Coding</div>
 									<div class="txt">
 										Jiezhang Cao, Yong Guo, Qingyao Wu, Chunhua Shen,Junzhou
-										Huang， Mingkui Tan<br>2018
+										Huang， Mingkui Tan
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -1010,7 +630,9 @@ to {
 									<div class="tit-2">Composite Functional Gradient Learning
 										of Generative Adversarial Models</div>
 									<div class="txt">
-										Rie Johnson, Tong Zhang<br>2018
+										Rie Johnson, Tong Zhang
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
@@ -1024,33 +646,36 @@ to {
 									<div class="tit-2">Feedback-based Tree Search for
 										Reinforcement Learning</div>
 									<div class="txt">
-										Daniel R. Jiang, Emmanuel Ekwedike, Han Liu<br>2018
+										Daniel R. Jiang, Emmanuel Ekwedike, Han Liu
+										<br>
+										2018
 									</div>
 									<div class="link">Read More</div>
 								</a>
 							</div>
 						</div>
 						<div class="paper-pagination-v hide">
-							<span class="swiper-pagination-switch swiper-visible-switch"></span><span
-								class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span><span
-								class="swiper-pagination-switch swiper-visible-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span><span
-								class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch swiper-visible-switch"></span>
+							<span
+								class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+							<span class="swiper-pagination-switch swiper-visible-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
+							<span class="swiper-pagination-switch"></span>
 						</div>
 						<div class="swiper-button-next paper-button-next"></div>
 						<div class="swiper-button-prev paper-button-prev"></div>
@@ -1131,43 +756,18 @@ to {
 							<div class="page8-text-2">加入我们的团队，与顶尖科学家们携手创造更美好的世界！</div>
 							<a class="page8-btn btn-common"
 								href="//ai.tencent.com/ailab/recruit.html" target="_blank">查看职位信息</a>
-
 						</div>
 					</div>
 				</div>
-				<footer class="footer">
-					<ul class="foot-logo">
-						<li class="tencent" title="tencent"><a
-							href="//www.tencent.com/" target="_blank">腾讯官网</a></li>
-						<li class="line" title="tencent"></li>
-						<li class="tencentlab" title="tencent lab"><a
-							href="//ai.tencent.com/">腾讯 AI Lab 官网</a></li>
-					</ul>
-					<div class="copyright">Copyright © 1998 - 2017 Tencent. All
-						Rights Reserved.</div>
-					<ul class="foot-msg">
-						<li class="msg-email"><a href="mailto:ailab@tencent.com"><i
-								class="icon icon-email"></i>email</a></li>
-						<li class="msg-Wechat"><i class="icon icon-wx"></i>Wechat
-							<div class="foot-pop">
-								<img src="/images/qrcode-wechat.png" alt="">
-							</div></li>
-						<li class="msg-qq"><i class="icon icon-qq"></i>QQ
-							International</li>
-					</ul>
-				</footer>
-
-
-
+				<!-- footer -->
+				<div th:replace="footer::html"></div>
 			</div>
 		</div>
 		<!-- Add Pagination -->
 		<div class="swiper-pagination swiper-pagination-h"></div>
 	</div>
 
-
 	<script type="text/javascript">
-
     // 判断UA
     $(function () {
         var Sys = {};
@@ -1363,22 +963,6 @@ to {
           dotShow();
           loadProperties(); //中英文切换
     }
-
     </script>
-
-
-
-
-
-
-
-
-
-
-
 </body>
-<div id="cVim-status-bar" style="top: 0px;"></div>
-<iframe
-	src="chrome-extension://ihlenndgcmojhcghmfjfneahoeklbjjh/cmdline_frame.html"
-	id="cVim-command-frame"></iframe>
 </html>
