@@ -116,6 +116,7 @@ function loadProperties() {
             $('.navbar li:eq(4)').find('span').text(msg_nav_4);
             $('.navbar li:eq(5)').find('span').text(msg_nav_5);
             $('.navbar li:eq(6)').find('span').text(msg_nav_6);
+            $('.navbar li:eq(7)').find('span').text(msg_nav_8);
 
             // 论文
             $('.paper-list-tit').text(msg_nav_2);

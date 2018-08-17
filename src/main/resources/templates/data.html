@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="" style="">
+
+<!-- head -->
+<head th:replace="head::html"></head>
+
+<body style="" class="lang-cn">
+	<div style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
+		<img id="mzsharethumbnail"
+			src="https://ai.tencent.com/ailab/images/share.png"
+			alt="Wechat Share Thumbnail">
+	</div>
+	<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+	<section class="g-wrap">
+		<!-- header -->
+		<div th:replace="header::header('data')"></div>
+
+		<div class="container about-page-wrap">
+		<!-- start html -->
+		<h1>data</h1>
+		<!-- end html -->
+		</div>
+
+		<!-- footer -->
+		<div th:replace="footer::html"></div>
+	</section>
+</body>
+</html>
