@@ -4,31 +4,26 @@
 <head th:replace="head::html"></head>
 
 <body style="" class="lang-cn">
-	<div
-		style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
-		<img id="mzsharethumbnail"
-			src="https://ai.tencent.com/ailab/images/share.png"
-			alt="Wechat Share Thumbnail">
-	</div>
-	<div
-		style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
-		<img id="mzsharethumbnail"
-			src="https://ai.tencent.com/ailab/images/logo.png"
-			alt="Wechat Share Thumbnail">
-	</div>
-	<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
-
-
-
-
 	<section class="g-wrap">
 		<div th:replace="header::header('papers')"></div>
 
 		<div class="container">
 			<div class="paper-title">
-				KnowEdu: A System to Construct Knowledge Graph for Education</div>
+				KnowEdu: A System to Construct Knowledge Graph for Education
+			</div>
 			<div class="paper-content">
 				<div class="paper-main">
+					<div class="paper-side">
+						<div class="row">
+							<div class="mod-tit">Venue</div>
+							<div class="mod-text">2018 IEEE Access</div>
+						</div>
+						<div class="row">
+							<div class="mod-tit">Authors</div>
+							<div class="mod-text">
+								PENGHE CHEN, YU LU, VINCENT W. ZHENG, XIYANG CHEN, BODA YANG</div> 
+						</div>
+					</div>
 					<div class="head">
 						<span class="mod-tit">Abstract</span>
 					</div>
@@ -40,23 +35,9 @@
 							the educational relations between the concepts.</p>
 					</div>
 				</div>
-				<div class="paper-side">
-					<div class="row">
-						<div class="mod-tit">Venue</div>
-						<div class="mod-text">2018 IEEE Access</div>
-					</div>
-					<div class="row">
-						<div class="mod-tit">Publication Time</div>
-						<div class="mod-text">2018</div>
-					</div>
-					<div class="row">
-						<div class="mod-tit">Authors</div>
-						<div class="mod-text">
-							PENGHE CHEN, YU LU, VINCENT W. ZHENG, XIYANG CHEN, BODA YANG</div> 
-					</div>
-				</div>
 			</div>
 		</div>
+		<!-- footer -->
 		<div th:replace="footer::html"></div>
 	</section>
 </body>

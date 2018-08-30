@@ -2756,7 +2756,7 @@ html.is-ie .pop-browser-warn {
 }
 .paper-main {
   float: left;
-  width: 62%;
+  width: 100%;
 }
 .paper-main .content img {
   max-width: 100%;
@@ -2765,8 +2765,8 @@ html.is-ie .pop-browser-warn {
   padding-bottom: 0.15rem;
 }
 .paper-side {
-  float: right;
-  width: 31%;
+  float: left;
+  width: 100%;
 }
 .paper-num {
   padding-bottom: 2rem;
