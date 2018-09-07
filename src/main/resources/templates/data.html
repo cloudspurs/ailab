@@ -2,7 +2,11 @@
 <html class="" style="">
 
 <!-- head -->
-<head th:replace="head::html"></head>
+<head th:replace="head::html">
+
+	<link rel="stylesheet" href="responsive-tables.css">
+	<script src="stylesheet" href="responsive-tables.js"></script>
+</head>
 
 <body style="" class="lang-cn">
 	<div style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
@@ -16,9 +20,334 @@
 		<!-- header -->
 		<div th:replace="header::header('data')"></div>
 
-		<div class="container about-page-wrap">
+
+
+		<div class="container">
 		<!-- start html -->
-		<h1>data</h1>
+
+			<div class="data-page-title data-title-common">数据</div>
+			
+			
+			<div class = "recruit-item">
+				<h3 class = "recruit-tit">数据集介绍</h3>
+				
+				
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;">
+				 			智慧学伴是一个服务于北京市中学生的在线学习平台，它不仅为学习者们提供丰富的在线学习资源和练习题目，
+				 			还能够根据学习者的学习、答题情况，基于大数据分析技术生成个性化的学习诊断报告。
+				 			我们将智慧学伴平台中的作答数据进行收集和分类加工，在脱敏处理后，将数据开放给各位研究者。
+				</p>
+	
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;"> 
+							完整数据集分为两个不同的类型，一类是微测数据，由学习者进行在线练习时产生，单次的微测练习通常集中于某个特定知识点的巩固；
+							另一类是总测数据，数据来源于学期中或学期末统一组织的考试，记录了大量参加统考的学生在各类不同知识点上的作答情况。
+				</p>
+				
+				
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;"> 
+							此外，我们还将数据按照学科分类，
+							共产出语文、数学、英语、物理、化学、生物、历史、地理等八个科目的总测和微测数据。
+							研究者可以选择自己感兴趣的科目数据进行下载和研究。
+				</p>
+	
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;"> 
+							本数据集的下载和使用是免费的。
+				</p>
+				
+			</div>
+			
+			<div class = "recruit-item">
+			
+				<h3 class = "recruit-tit">数据集下载</h3>
+				<div class="news-list clearfix">
+				
+					<div class="news-item">
+						<a href="download-unit">
+							
+							<div class="news-text" style = "background: #282e64">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">微测数据集</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									微测数据由学习者进行在线练习时产生，单次的微测练习通常集中于某个特定知识点的巩固
+									<div class="news-date">更新于2018年8月31日</div>
+								<span class="readmore" style = "color: #ffffff;">下载 &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+					<div class="news-item">
+						<a href="download-term">
+							
+							<div class="news-text" style = "background: #282e64">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">总测数据集</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									总测数据来源于学期中或学期末统一组织的考试，
+									记录了大量参加统考的学生在各类不同知识点上的作答情况
+									<div class="news-date">更新于2018年8月31日</div>
+								<span class="readmore" style = "color: #ffffff;">下载 &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+				</div>
+				
+			
+			</div>
+			
+			
+			
+			<div class = "recruit-item">
+			
+				<h3 class = "recruit-tit">字段说明</h3>
+
+						<div>微测数据字段说明</div>
+						<div class="table_grad scroll_tablex">
+						      <table class="table_tab responsive">
+						            <tr>
+						               
+						               <th>编号</th>
+						               <th>字段名</th>
+						               <th>类型</th>
+						               <th>字段描述</th>
+						               <th>备注</th>
+						           </tr>
+						           
+						           <tr>     
+						                <td>1</td>
+						                <td class="oneline onelineTd">user</td>
+						                <td>bigint(20)</td>
+						                <td>用户ID</td>
+						                <td>唯一</td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>2</td>
+						                <td class="oneline onelineTd">area_code</td>
+						                <td>varchar(255)</td>
+						                <td>区编码</td>
+						                <td></td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>3</td>
+						                <td class="oneline onelineTd">school_ID</td>
+						                <td>varchar(255)</td>
+						                <td>学校ID</td>
+						                <td></td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>4</td>
+						                <td class="oneline onelineTd">class_ID</td>
+						                <td>varchar(255)</td>
+						                <td>班级ID</td>
+						                <td></td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>5</td>
+						                <td class="oneline onelineTd">course</td>
+						                <td>varchar(255)</td>
+						                <td>科目</td>
+						                <td>BI:生物, CH:化学, CN:语文, EN:英语, GE:地理, HI:历史, MA:数学, PH:物理</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>6</td>
+						                <td class="oneline onelineTd">exam_ID</td>
+						                <td>varchar(255)</td>
+						                <td>考试ID</td>
+						                <td>唯一</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>7</td>
+						                <td class="oneline onelineTd">problem_ID</td>
+						                <td>varchar(255)</td>
+						                <td>题目ID</td>
+						                <td>唯一</td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>8</td>
+						                <td class="oneline onelineTd">concept</td>
+						                <td>varchar(255)</td>
+						                <td>知识点</td>
+						                <td>题目所考察的核心概念</td>
+						            </tr>
+						            
+						             <tr>     
+						                <td>9</td>
+						                <td class="oneline onelineTd">score_rate</td>
+						                <td>float</td>
+						                <td>得分率</td>
+						                <td></td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>10</td>
+						                <td class="oneline onelineTd">datetime_of_creating_the_exam</td>
+						                <td>datetime</td>
+						                <td>微测创建时间</td>
+						                <td>格式：YYYY/MM/DD  hh:mm:ss</td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>11</td>
+						                <td class="oneline onelineTd">datetime_of_start_answering</td>
+						                <td>datetime</td>
+						                <td>学生开始作答微测时间</td>
+						                <td>格式：YYYY/MM/DD  hh:mm:ss</td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>12</td>
+						                <td class="oneline onelineTd">datetime_of_submission</td>
+						                <td>datetime</td>
+						                <td>学生提交微测时间</td>
+						                <td>格式：YYYY/MM/DD  hh:mm:ss</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>13</td>
+						                <td class="oneline onelineTd">total_answer_duration</td>
+						                <td>bigint(20) unsigned</td>
+						                <td>作答时长</td>
+						                <td>该次微测所有题目的总作答时长，单位：毫秒</td>
+						            </tr>
+						            
+						            
+						            
+						            
+						     </table>
+						</div>
+						
+						<div style = "height: 50px"></div>
+						
+						<div>总测数据字段说明</div>
+						
+						<div class="table_grad scroll_tablex">
+						      <table class="table_tab responsive">
+						            <tr>
+						               
+						               <th>编号</th>
+						               <th>字段名</th>
+						               <th>类型</th>
+						               <th>字段描述</th>
+						               <th>备注</th>
+						           </tr>
+						           
+						           <tr>     
+						                <td>1</td>
+						                <td class="oneline onelineTd">user</td>
+						                <td>bigint(20)</td>
+						                <td>用户ID</td>
+						                <td>unique</td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>2</td>
+						                <td class="oneline onelineTd">area_code</td>
+						                <td>varchar(255)</td>
+						                <td>区编码</td>
+						                <td></td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>3</td>
+						                <td class="oneline onelineTd">school_ID</td>
+						                <td>varchar(255)</td>
+						                <td>学校ID</td>
+						                <td></td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>4</td>
+						                <td class="oneline onelineTd">class_ID</td>
+						                <td>varchar(255)</td>
+						                <td>班级ID</td>
+						                <td></td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>5</td>
+						                <td class="oneline onelineTd">course</td>
+						                <td>varchar(255)</td>
+						                <td>科目</td>
+						                <td>BI:生物, CH:化学, CN:语文, EN:英语, GE:地理, HI:历史, MA:数学, PH:物理/td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>6</td>
+						                <td class="oneline onelineTd">exam_ID</td>
+						                <td>varchar(255)</td>
+						                <td>考试ID</td>
+						                <td>唯一</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>7</td>
+						                <td class="oneline onelineTd">problem_ID</td>
+						                <td>varchar(255)</td>
+						                <td>题目ID</td>
+						                <td>唯一</td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>8</td>
+						                <td class="oneline onelineTd">concept</td>
+						                <td>varchar(255)</td>
+						                <td>知识点</td>
+						                <td>题目所考察的核心概念</td>
+						            </tr>
+						            
+						             <tr>     
+						                <td>9</td>
+						                <td class="oneline onelineTd">score_rate</td>
+						                <td>float</td>
+						                <td>得分率</td>
+						                <td></td>
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>10</td>
+						                <td class="oneline onelineTd">edu_period</td>
+						                <td>datetime</td>
+						                <td>学段</td>
+						                <td>学生所处学习阶段，例如"七年级"</td>
+						               
+						            </tr>
+						            
+						            
+						            <tr>     
+						                <td>11</td>
+						                <td class="oneline onelineTd">exam_starting_datetime</td>
+						                <td>datetime</td>
+						                <td>总测开始时间</td>
+						                <td>格式：YYYY/MM/DD  hh:mm:ss</td>
+						            </tr>
+						            
+						            
+						            
+						            
+						            
+						            
+						     </table>
+						</div>
+				
+					
+				
+			</div>
+		
+
+
 		<!-- end html -->
 		</div>
 
