@@ -20,18 +20,17 @@ $(document).ready(function(){
     (function() {
         if($('.pop-page').length){
             var share = new Sona.Share({
-                title: '腾讯AI实验室博士生奖学金计划',
+                title: 'AI实验室博士生奖学金计划',
                 desc: '申请进行中，海内外人工智能领域的博士学霸们，别错过哦~',
                 thumb: '/images/share.png'
             });
         } else{
             var share = new Sona.Share({
-                title: 'Tencent AI Lab',
+                title: 'AI Lab',
                 desc: '让 AI 无处不在',
                 thumb: '/images/share.png'
             });
         }
-
     })();
 });
 
