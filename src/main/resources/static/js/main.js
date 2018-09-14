@@ -177,8 +177,39 @@ function loadProperties() {
             $('.application-area-list li').eq(1).find('p').html(application_list_desc2);
             $('.application-area-list li').eq(2).find('p').html(application_list_desc3);
             $('.application-area-list li').eq(3).find('p').html(application_list_desc4);
-        }
+            
+            // 数据
+            $('.data .data-page-title').text(msg_data);
+            $('.data .recruit-item:eq(0)').html(msg_dataset);
+            $('.data .recruit-item:eq(2) div:eq(0)').html(msg_column_info_unit);
+            $('.data .recruit-item:eq(2) div:eq(3)').html(msg_column_info_term);
+            $('.data .recruit-tit:eq(1)').text(msg_dataset_dl);
+            $('.data .recruit-tit:eq(2)').text(msg_column_info);
+            $('.data .news-item h4:eq(0)').text(msg_dataset_unit);
+            $('.data .news-item h4:eq(1)').text(msg_dataset_term);
+            $('.data .news-item p:eq(0)').text(msg_dataset_unit_info);
+            $('.data .news-item p:eq(1)').text(msg_dataset_term_info);
+           
+            $('.unit .data-page-title').text(msg_dataset_dl_unit);
+            $('.unit .paper-main a:eq(0)').text(msg_dataset_unit_chn);
+            $('.unit .paper-main a:eq(1)').text(msg_dataset_unit_math);
+            $('.unit .paper-main a:eq(2)').text(msg_dataset_unit_eng);
+            $('.unit .paper-main a:eq(3)').text(msg_dataset_unit_phy);
+            $('.unit .paper-main a:eq(4)').text(msg_dataset_unit_che);
+            $('.unit .paper-main a:eq(5)').text(msg_dataset_unit_bio);
+            $('.unit .paper-main a:eq(6)').text(msg_dataset_unit_his);
+            $('.unit .paper-main a:eq(7)').text(msg_dataset_unit_geo);
 
+            $('.term .data-page-title').text(msg_dataset_dl_term);
+            $('.term .paper-main a:eq(0)').text(msg_dataset_term_chn);
+            $('.term .paper-main a:eq(1)').text(msg_dataset_term_math);
+            $('.term .paper-main a:eq(2)').text(msg_dataset_term_eng);
+            $('.term .paper-main a:eq(3)').text(msg_dataset_term_phy);
+            $('.term .paper-main a:eq(4)').text(msg_dataset_term_che);
+            $('.term .paper-main a:eq(5)').text(msg_dataset_term_bio);
+            $('.term .paper-main a:eq(6)').text(msg_dataset_term_his);
+            $('.term .paper-main a:eq(7)').text(msg_dataset_term_geo);
+        }
     });
 
     // 初始化页面中英文

@@ -5,23 +5,6 @@
 <head th:replace="head::html"></head>
 
 <body style="" class="lang-cn">
-	<div style="position: absolute; opacity: 0; z-index: -1; width: 0; height: 0; overflow: hidden;">
-		<img id="mzsharethumbnail"
-			src="https://ai.tencent.com/ailab/images/share.png"
-			alt="Wechat Share Thumbnail">
-	</div>
-	<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
-
-	<!-- loading -->
-	<div class="loading hide" id="loader">
-		<div class="loading-img" id="loadimg"></div>
-		<div class="loading-bar" id="loadbar">
-			<span class="percent-text">Loading…</span>
-			<span class="percent-num" id="percent">0%</span>
-		</div>
-	</div>
-	<!-- loading -->
-
 	<!-- header -->
 	<div th:replace="header::header('index')"></div>
 
@@ -44,10 +27,6 @@
 				<em class="cndot">最新动态</em>
 				<em class="endot" style="display: none;">News</em>
 			</span>
-			<span class="swiper-pagination-switch">
-				<em class="cndot">加入腾讯</em>
-				<em class="endot" style="display: none;">Join Us</em>
-			</span>
 		</div>
 		<div class="swiper-wrapper swiper-wrapper-h"
 			style="width: 1920px; height: 4935px; transform: translate3d(0px, 0px, 0px); transition-duration: 0.3s;">
@@ -56,17 +35,16 @@
 				<div class="page-wr page1">
 					<div class="logo">
 						<img class="logo_img" src="/images/aicfe.png"
-							srcset="/images/aicfe.png" alt="腾讯 AI Lab">
+							srcset="/images/aicfe.png" alt=" AI Lab">
 					</div>
-					<!-- <h2 class="logo-text">腾讯 AI Lab 官网</h2> -->
 					<div class="page1-title-slogen">Make AI Everywhere</div>
 					<div class="page1-title">让 AI 无处不在</div>
 					<div class="page1-info">
-						腾讯公司级AI战略蓄势待发，聚集全球数十位人工智能科学家、70余位世界一流AI博士。
+						公司级AI战略蓄势待发，聚集全球数十位人工智能科学家、70余位世界一流AI博士。
 						<br>
 						专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究，孵化出机器翻译、语音聊天、智能问答、图像理解、棋类博弈、无人驾驶等项目，探索未来技术的商业应用前景。
 						<br>
-						基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+						基于亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
 						<br>
 					</div>
 				</div>
@@ -134,7 +112,7 @@
 											</i>
 											<div class="section">
 												<h4>游戏AI</h4>
-												<p>核心领域：围棋AI绝艺，其他腾讯游戏；支持中国排名第一的线上游戏提供商。</p>
+												<p>核心领域：围棋AI绝艺，其他游戏；支持中国排名第一的线上游戏提供商。</p>
 											</div>
 										</li>
 										<li>
@@ -234,13 +212,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="swiper-slide" style="width: 1920px; height: 987px;">
+			<div class="swiper-slide page8-wr" style="width: 1920px; height: 987px;">
 				<div class="page-wr page7">
 					<div class="page7-container">
 						<h2 class="page7-title">最新动态</h2>
 						<div class="page7-news-list clearfix">
 							<div class="news-item">
-								<a href="news14.html" target="_blank">
+								<a href="news1.html" target="_blank">
 									<div class="news-pic" style="background-image: url(/images/dongqi.jpg);"></div>
 									<div class="news-text">
 										<h4 class="news-title">2018年年中工作总结</h4>
@@ -251,7 +229,7 @@
 								</a>
 							</div>
 							<div class="news-item">
-								<a href="//ai.tencent.com/ailab/news13.html">
+								<a href="#">
 									<div class="news-pic" style="background-image: url(/images/xly.jpg);"></div>
 									<div class="news-text">
 										<h4 class="news-title">中心接待北京师范大学教育技术学夏令营</h4>
@@ -263,9 +241,8 @@
 							</div>
 
 							<div class="news-item">
-								<a href="//ai.tencent.com/ailab/news12.html">
-									<div class="news-pic"
-										style="background-image: url(/images/zstp.jpg);"></div>
+								<a href="#">
+									<div class="news-pic" style="background-image: url(/images/zstp.jpg);"></div>
 									<div class="news-text">
 										<h4 class="news-title">中心研究人员参加人工智能教育领域多个国际会议</h4>
 										<p class="news-desc">6月24-30日，第13届学习科学国际会议（13th International Conference of the Learning Sciences, ICLS）、19届人工智能教育国际会议（19th International Conference on Artificial Intelligence in Education, AIED）、第5届ACM（5th Annual ACM Conference on Learning at Scale, L@S）在英国伦敦举办。高精尖中心人工智能实验室主任卢宇博士、研究员陈鹏鹤博士、助理研究员陈晨，学习科学实验室张立山博士的研究成果被AIED和L@S会议接收并参加会议。</p>
@@ -274,31 +251,9 @@
 									</div>
 								</a>
 							</div>
-
 						</div>
-						<div class="page-btn-area">
-							<a href="news" target="_blank"
-								class="page7-btn btn-common">查看全部动态</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide page8-wr"
-				style="width: 1920px; height: 987px;">
-				<div class="page-wr page8">
-					<div class="page8-wrap page-content">
-						<div class="page8-container">
-							<h2 class="page8-title">来自腾讯</h2>
-							<div class="page8-text">在移动互联网新技术发展中，腾讯将专注AI技术的广泛应用与基础研究，结合产品数据与用户行为的学习，为多个产品打造出个性化与创新体验，在挑战难题的同时研究对新算法的突破。于此同时，通过云服务与开放平台，将图表、语音、自然语言、机器学习等方面积累的AI技术提供给广大创业者。</div>
-							<div class="page8-title-3">腾讯AI Lab犀牛鸟学术合作计划</div>
-							<div class="page8-text-3">腾讯AI
-								Lab犀牛鸟学术合作计划秉持开放、灵活、共赢的原则，旨在通过无边界的产学研合作，推动人工智能的前沿研发和人才培养。</div>
-							<a class="page8-btn2 btn-common"
-								href="academic" target="_blank">查看更多项目</a>
-							<div class="page8-title-2">诚邀您的加入</div>
-							<div class="page8-text-2">加入我们的团队，与顶尖科学家们携手创造更美好的世界！</div>
-							<a class="page8-btn btn-common"
-								href="recruit" target="_blank">查看职位信息</a>
+						<div style="text-align: center;">
+							<a href="news" target="_blank" class="page7-btn btn-common">查看全部动态</a>
 						</div>
 					</div>
 				</div>
