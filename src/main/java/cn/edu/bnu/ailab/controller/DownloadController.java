@@ -36,13 +36,8 @@ public class DownloadController {
 	public void download(@PathVariable("kind") String kind, @PathVariable("course") String course,
 			HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-//		File path = new File(ResourceUtils.getURL("classpath:").getPath());
-//		File path = new File(ClassUtils.getDefaultClassLoader().getResource("").getPath());
-//		File file = new File(path.getAbsolutePath(), "static/data/" + kind + "/" + course + ".txt");
-//		File file  = resource.getFile();
-//		System.out.println(file.getAbsolutePath());
-
 		Resource file = new ClassPathResource(get_file_path(kind, course));
+
 		if(file.exists()) {
 			// 设置强制下载不打开
 			response.setContentType("application/force-download");
