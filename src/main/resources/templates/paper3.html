@@ -1,0 +1,52 @@
+
+<html class="pc" style="font-size: 91.3889px;">
+
+<!-- head -->
+<head th:replace="head::html"></head>
+
+<body style="" class="lang-cn">
+	<section class="g-wrap">
+		<div th:replace="header::header('papers')"></div>
+
+		<div class="container">
+			
+			<div class="paper-title">
+				A Framework for Learning Analytics Using Commodity Wearable Devices
+			</div>
+			<a href="/download/papers/Sensors-2017.pdf">
+				<div class="pagep-btn btn-common"> download </div>
+			</a>
+			<div class="paper-content">
+				<div class="paper-main">
+					<div class="paper-side">
+						<div class="row">
+							<div class="mod-tit">Venue</div>
+							<div class="mod-text">2017 Sensors</div>
+						</div>
+						<div class="row">
+							<div class="mod-tit">Authors</div>
+							<div class="mod-text">
+								Yu LU, Sen ZHANG, Zhiqiang ZHANG, Wendong XIAO and Shengquan YU</div> 
+						</div>
+					</div>
+					<div class="head">
+						<span class="mod-tit">Abstract</span>
+					</div>
+					<div class="content">
+						<p>We advocate for and introduce LEARNSense, a framework for learning analytics using commodity wearable devices to capture learner’s physical actions and accordingly infer learner
+						context (e.g., student activities and engagement status in class). Our work is motivated by the observations that: (a) the fine-grained individual-specific learner actions are crucial to understand
+						learners and their context information; (b) sensor data available on the latest wearable devices (e.g., wrist-worn and eye wear devices) can effectively recognize learner actions and help to infer
+						learner context information; (c) the commodity wearable devices that are widely available on the market can provide a hassle-free and non-intrusive solution. Following the above observations and
+						under the proposed framework, we design and implement a sensor-based learner context collector running on the wearable devices. The latest data mining and sensor data processing techniques
+						are employed to detect different types of learner actions and context information. Furthermore, we detail all of the above efforts by offering a novel and exemplary use case: it successfully provides the
+						accurate detection of student actions and infers the student engagement states in class. The specifically designed learner context collector has been implemented on the commodity wrist-worn device. Based 
+						on the collected and inferred learner information, the novel intervention and incentivizing feedback are introduced into the system service. Finally, a comprehensive evaluation with the real-world experiments, surveys and interviews demonstrates the effectiveness and impact of the proposed framework and this use case. The F1 score for the student action classification tasks achieve 0.9, and the system can effectively differentiate the defined three learner states. Finally, the survey results show that the learners are satisfied with the use of our system (mean score of 3.7 with a standard deviation of 0.55).</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div th:replace="footer::html"></div>
+	</section>
+</body>
+</html>

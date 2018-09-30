@@ -114,12 +114,14 @@ function loadProperties() {
             $('.navbar li:eq(3)').find('span').text(msg_nav_3);
             $('.navbar li:eq(4)').find('span').text(msg_nav_4);
             $('.navbar li:eq(5)').find('span').text(msg_nav_5);
-            $('.navbar li:eq(6)').find('span').text(msg_nav_6);
-            $('.navbar li:eq(7)').find('span').text(msg_nav_8);
+            $('.navbar li:eq(6)').find('span').text(msg_nav_8);
+            $('.navbar li:eq(7)').find('span').text(msg_nav_6);
+            
 
             // 论文
             $('.paper-list-tit').text(msg_nav_2);
             $('.search-filter-title').text(research_title);
+            $('.pagep-btn').text(msg_pagep_btn);
 
             // 新闻
             $('.related-title').text(related_title)
@@ -143,6 +145,7 @@ function loadProperties() {
             // 招聘
             $('.banner-recruit h2').html(msg_banner_recruit);
             $('.recruit-list').html(msg_recruit_list);
+            
 
             // 关于我们
             $('.banner-about h2').text(msg_about_banner);
@@ -159,6 +162,13 @@ function loadProperties() {
             $('.member3 .member-name').text(msg_member3_name);
             $('.member3 .member-position').text(msg_member3_pos);
             $('.member3 .member-desc').html(msg_member3_desc);
+            $('.member4 .member-name').text(msg_member4_name);
+            $('.member4 .member-position').text(msg_member4_pos);
+            $('.member4 .member-desc').html(msg_member4_desc);
+            $('.member5 .member-name').text(msg_member5_name);
+            $('.member5 .member-position').text(msg_member5_pos);
+            $('.member5 .member-desc').html(msg_member5_desc);
+            
             $('.search-area h3').text(search_area_h3);
             $('.search-area-list li').eq(0).find('h4').html(search_list_tit1);
             $('.search-area-list li').eq(1).find('h4').html(search_list_tit2);

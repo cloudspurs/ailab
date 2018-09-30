@@ -27,18 +27,33 @@ public class DownloadController {
 	 */
 	public String get_file_path(String kind, String course) {
 		final String data_path = "/static/data/";
-		final String file_name = kind + "-" + course + ".rar";
+		final String file_name = kind + "-" + course;
 		return data_path + kind + "/" + file_name;
 	}
+	
+	//public String get_paper_path(String name) {
+	//	final String data_path = "/static/data/";
+	//	return data_path + "/" + name;
+	//}
 	
 	@RequestMapping(value = "/{kind}/{course}", method = RequestMethod.GET)
 	@ResponseBody
 	public void download(@PathVariable("kind") String kind, @PathVariable("course") String course,
 			HttpServletRequest request, HttpServletResponse response) throws IOException {
 
+
 		Resource file = new ClassPathResource(get_file_path(kind, course));
+		
+		//if (kind == "papers") {
+		//	Resource file = new ClassPathResource(get_paper_path(course));
+		//}
+		//else {
+		//	Resource file = new ClassPathResource(get_file_path(kind, course));
+		//}
+			
 
 		if(file.exists()) {
+			
 			// 设置强制下载不打开
 			response.setContentType("application/force-download");
             response.addHeader("Content-Disposition", "attachment;fileName=" + file.getFilename());
