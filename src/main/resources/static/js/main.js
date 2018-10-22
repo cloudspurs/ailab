@@ -168,6 +168,21 @@ function loadProperties() {
             $('.member5 .member-name').text(msg_member5_name);
             $('.member5 .member-position').text(msg_member5_pos);
             $('.member5 .member-desc').html(msg_member5_desc);
+            $('.member6 .member-name').text(msg_member6_name);
+            $('.member6 .member-position').text(msg_member6_pos);
+            $('.member6 .member-desc').html(msg_member6_desc);
+            $('.member7 .member-name').text(msg_member7_name);
+            $('.member7 .member-position').text(msg_member7_pos);
+            $('.member7 .member-desc').html(msg_member7_desc);
+            $('.member8 .member-name').text(msg_member8_name);
+            $('.member8 .member-position').text(msg_member8_pos);
+            $('.member8 .member-desc').html(msg_member8_desc);
+            $('.member9 .member-name').text(msg_member9_name);
+            $('.member9 .member-position').text(msg_member9_pos);
+            $('.member9 .member-desc').html(msg_member9_desc);
+            $('.member10 .member-name').text(msg_member10_name);
+            $('.member10 .member-position').text(msg_member10_pos);
+            $('.member10 .member-desc').html(msg_member10_desc);
             
             $('.search-area h3').text(search_area_h3);
             $('.search-area-list li').eq(0).find('h4').html(search_list_tit1);
