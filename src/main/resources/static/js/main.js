@@ -183,6 +183,9 @@ function loadProperties() {
             $('.member10 .member-name').text(msg_member10_name);
             $('.member10 .member-position').text(msg_member10_pos);
             $('.member10 .member-desc').html(msg_member10_desc);
+            $('.member11 .member-name').text(msg_member11_name);
+            $('.member11 .member-position').text(msg_member11_pos);
+            $('.member11 .member-desc').html(msg_member11_desc);
             
             $('.search-area h3').text(search_area_h3);
             $('.search-area-list li').eq(0).find('h4').html(search_list_tit1);

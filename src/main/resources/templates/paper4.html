@@ -1,0 +1,64 @@
+<html class="pc" style="font-size: 91.3889px;">
+
+<!-- head -->
+<head th:replace="head::html"></head>
+
+<body style="" class="lang-cn">
+	<section class="g-wrap">
+		<div th:replace="header::header('papers')"></div>
+
+		<div class="container">
+			<div class="paper-title">
+				Prerequisite-Driven Deep Knowledge Tracing
+			</div>
+			
+			<a href="/download/papers/ICDM-2018.pdf">
+				<div class="pagep-btn btn-common"> download </div>
+			</a>
+			
+			<div class="paper-content">
+				<div class="paper-main">
+					<div class="paper-side">
+						<div class="row">
+							<div class="mod-tit">Venue</div>
+							<div class="mod-text">2018 IEEE ICDM</div>
+						</div>
+						<div class="row">
+							<div class="mod-tit">Authors</div>
+							<div class="mod-text">
+								Penghe CHEN, Yu LU, Vincent W. ZHENG, and Yang PIAN
+							</div> 
+						</div>
+					</div>
+					<div class="head">
+						<span class="mod-tit">Abstract</span>
+					</div>
+					<div class="content">
+						<p>Knowledge tracing serves as the key technique in
+							the computer supported education environment (e.g., intelligent
+							tutoring systems) to model student's knowledge states. While the
+							Bayesian knowledge tracing and deep knowledge tracing models
+							have been developed, the sparseness of student's exercise data
+							still limits knowledge tracing's performance and applications.
+							In order to address this issue, we advocate for and propose
+							to incorporate the knowledge structure information, especially
+							the prerequisite relations between pedagogical concepts, into
+							the knowledge tracing model. Specifically, by considering how
+							students master pedagogical concepts and their prerequisites,
+							we model prerequisite concept pairs as ordering pairs. With a
+							proper mathematical formulation, this property can be utilized as
+							constraints in designing knowledge tracing model. As a result, the
+							obtained model can have a better performance on student concept
+							mastery prediction. In order to evaluate this model, we test it on
+							five different real world datasets, and the experimental results
+							show that the proposed model achieves a significant performance
+							improvement by comparing with three knowledge tracing models.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div th:replace="footer::html"></div>
+	</section>
+</body>
+</html>
